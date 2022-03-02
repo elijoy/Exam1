@@ -8,15 +8,30 @@ You have been given partial code. The objective is to reproduce the output as sh
    and the output should reflect that as shown in the picture.
 '''
 
-
+import CourseClass as cc
 
 def main():
+
+
 
     name = 'MIS 4322 - Advanced Python'
     crn = '250309'
     seats = 4
     status = 'open'
     students = ['John','James','Jill','Jack','Joanne']
+    
+    x = cc.Course(students, crn, seats, status)
+
+    for x in students:
+       print("Student: ", x.get_name())
+       print("Course Name: ", name)
+       print("CRN: ", x.get_crn)
+       print("Seats left: ", x.get_seats())
+       if seats == 0:
+          print("Sorry Joanne, registration is closed for ", name)
+       
+
+
 
     
 main()
